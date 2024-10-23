@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="admin.css" rel="stylesheet" />
+    <title>Catshop Admin</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bx-store"></i>
+        <span class="logo_name">Savory Station</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a class="active" href="admin.html">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="recent_orders.html">
+            <i class="bx bx-receipt"></i>
+            <span class="links_name">Recent Orders</span>
+          </a>
+        </li>
+        <li>
+          <a href="menumanagement.html">
+            <i class="bx bx-food-menu"></i>
+            <span class="links_name">Menu Management</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-log-out"></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <nav>
+        <div class="sidebar-button">
+          <i class="bx bx-menu sidebarBtn"></i>
+        </div>
+        <div class="profile-details">
+          <span class="admin_name">SS Admin</span>
+        </div>
+      </nav>
+      <div class="home-content">
+        <section class="mb-8">
+          <h2 class="dashboard-title">Dashboard</h2>
+          <div class="dashboard-cards">
+            <div class="dashboard-card">
+              <h3>Total Orders</h3>
+              <p>120</p>
+            </div>
+            <div class="dashboard-card">
+              <h3>Total Revenue</h3>
+              <p>Rp 3.000.000,00</p>
+            </div>
+            <div class="dashboard-card">
+              <h3>Total Reservations</h3>
+              <p>45</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("active");
+        if (sidebar.classList.contains("active")) {
+          sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+      };
+    </script>
+  </body>
+</html>
